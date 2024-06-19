@@ -6,7 +6,7 @@ const [searchParams] = useSearchParams()
 const sortFilter:string = searchParams.get('sort')??''
 
 const { data, isPending } = useQuery({
-    queryKey: ['/product',sortFilter],
+    queryKey: ['/product'],
     queryFn: async () => {
         let baseUrl:string = 'https://fakestoreapi.com/products'
         if (sortFilter) {
